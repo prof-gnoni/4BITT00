@@ -1,0 +1,68 @@
+/* Resetta margini e padding per tutti gli elementi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Imposta la pagina come un contenitore flex, per allineare il footer in fondo */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altezza minima della pagina */
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+}
+
+/* Aggiungi uno spazio tra gli elementi della pagina */
+main {
+    flex-grow: 1; /* Questo consente al contenuto di crescere e spingere il footer verso il fondo */
+}
+
+/* Footer che rimane sempre in fondo alla pagina */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+}
+
+/* Usa clear per prevenire conflitti con elementi flottanti precedenti */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Stile per gli altri elementi */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    color: red;
+}
+
+section {
+    background-color: lightyellow;
+    padding: 20px;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    padding: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: lightgreen;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: lightcoral;
+}
